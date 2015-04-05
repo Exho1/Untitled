@@ -1,23 +1,23 @@
-AddCSLuaFile( "cl_init.lua" )
-AddCSLuaFile( "shared.lua" )
+AddCSLuaFile "cl_init.lua"
+AddCSLuaFile "shared.lua"
  
-include( 'shared.lua' )
+include "shared.lua"
 
-function GM:PlayerSpawn( ply )
-    self.BaseClass:PlayerSpawn( ply )   
+function GM:PlayerSpawn ( fag )
+    self.BaseClass:PlayerSpawn ( fag )   
  
-    ply:SetGravity  ( 1 )  
-    ply:SetMaxHealth( 100, true )  
+    fag:SetGravity  ( 1 )  
+    fag:SetMaxHealth ( 100, true )  
  
-    ply:SetWalkSpeed( 190 )  
-    ply:SetRunSpeed ( 235 ) 
+    fag:SetWalkSpeed ( 190 )  
+    fag:SetRunSpeed ( 235 ) 
  
 end
 
-function GM:PlayerLoadout( ply )
+function GM:PlayerLoadout ( fag )
 	
 end
 
-function GM:PlayerInitialSpawn( ply )
-	   ply:PrintMessage( HUD_PRINTTALK, "Welcome, " .. ply:Name() .. "!" )
+function GM:PlayerInitialSpawn ( fag )
+	   fag:PrintMessage ( HUD_PRINTTALK, "Welcome, " .. fag:Name() .. "!" )
 end
