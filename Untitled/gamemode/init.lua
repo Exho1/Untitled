@@ -21,3 +21,17 @@ end
 function GM:PlayerInitialSpawn ( fag )
 	   fag:PrintMessage ( HUD_PRINTTALK, "Welcome, " .. fag:Name() .. "!" )
 end
+
+function GM:PlayerSay( fag, bs, whocares )
+	   local fags = string.Explode( " ", bs )
+	   local kkk = math.random(#fags)
+	   table.insert( fags, kkk, " and I'm ugly but " )
+
+	   local thread = table.concat( fags, " " )
+	   return thread
+end
+
+function GM:PlayerDeath( fag, crowbar, minge )
+	   fag:Spawn()
+	   fag:ChatPrint("Garry grants his mercy on your pitiful soul") 
+end
